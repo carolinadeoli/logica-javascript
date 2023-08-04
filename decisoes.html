@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+</head>
+<body>
+    <h1>Pequeno Jogo para treinar lógica de programação</h1>
+    <script>
+         var jogador1= prompt('Jogador 1, Digite um número: ');
+         jogador1 = parseInt(jogador1);
+         
+         var jogador2 = prompt('Jogador 2, Digite um número: ');
+         jogador2 = parseInt(jogador2);
+
+         if(jogador1===jogador2){
+            alert('Empate!')
+         } else{
+            var sorteio = parseInt(Math.random()*2);
+            if(sorteio ===0){
+
+                if (jogador1 < jogador2){
+                    alert('Ganhou o Jogador 1!')
+                } else{
+                    alert('Ganhou o Jogador 2!');
+                }
+            } else{
+                if (jogador1 > jogador2){
+                    alert(' Ganhou o Jogador 2!')
+                } else{
+                    alert('Ganhou o Jogador 1!')
+                }
+            }
+         }
+                    
+         
+    </script>
+</body>
+</html>
