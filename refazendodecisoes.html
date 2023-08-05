@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reescrevendo o exercício de decisões</title>
+</head>
+<body>
+    <h1>Lógica de Programação</h1>
+    <script>
+        var jogador1= prompt('Jogador 1, Digite um número: ');
+        jogador1 = parseInt(jogador1);
+        
+        var jogador2 = prompt('Jogador 2, Digite um número: ');
+        jogador2 = parseInt(jogador2);
+
+        if(jogador1===jogador2){
+           alert('Empate!')
+        } else{
+           var sorteio = parseInt(Math.random()*2);
+           alert(' O número sorteado foi: ' + sorteio)
+           if (sorteio === 0 && jogador1 < jogador2 || sorteio === 1 && jogador1 > jogador2){
+                alert('Ganhou o jogador um!');
+           } else{
+            alert('Ganhou o jogador dois!')
+           }
+        }
+                          
+   </script>
+</body>
+</html>
+

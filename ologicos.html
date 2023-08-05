@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Progamação</title>
+</head>
+<body>
+    <h1> Lógica com Operadores Lógicos</h1>
+    <script>
+        var n1 = prompt('digite uma nota: ');
+        n1 =  parseFloat(n1);
+        
+        var n2 = parseFloat(prompt('digite a segunda nota: '));
+        
+        var media = (n1 + n2) / 2;
+        
+            
+        if(media <= 5 || n1 === 0 || n2 === 0){
+            alert("Desculpe, não foi dessa vez");
+        } else {
+            alert("Parabéns, você foi aprovado!");
+        }
+    
+    </script>
+</body>
+</html>
