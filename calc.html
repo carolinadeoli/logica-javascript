@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+</head>
+<body>
+    <h1>Lógica de Programação com JavaScript</h1>
+    <button onclick="somar()"> + </button>
+    <button onclick="subtrair()"> - </button>
+    <button onclick="multiplicar()"> *</button>
+    <button onclick="dividir()">/</button>
+    <div id="output"></div>
+
+    <script>
+        
+        var n1 = prompt('Digite um número: ');
+        n1 = parseFloat(n1);
+
+        function escreve(){
+            var output = document.querySelector('#output');
+            output.innerHTML = n1;
+        }
+
+        function somar(){
+            var n2 = prompt('Digite outro número:');
+            n2= parseFloat(n2);
+            n1 = n1 + n2;
+            escreve();
+        }
+        function subtrair(){
+            var n2 = prompt('Digite outro número:');
+            n2= parseFloat(n2);
+            n1 = n1 - n2;
+            escreve();
+        }
+        function multiplicar(){
+            var n2 = prompt('Digite outro número:');
+            n2= parseFloat(n2);
+            n1 = n1 * n2;
+            escreve();
+        }
+        function dividir(){
+            var n2 = prompt('Digite outro número:');
+            n2= parseFloat(n2);
+            n1 = n1 / n2;
+            escreve();
+        }
+        
+        // Havia feito assim:
+        //     function somar(){
+        //     var output = document.querySelector('#output');
+        //     var n1 = prompt('Digite um número: ');
+        //     n1 = parseFloat(n1);
+        //     var n2 = prompt('Digite outro número:');
+        //     n2= parseFloat(n2);
+        //     var soma = n1 + n2;
+        //     output.innerHTML = soma;
+
+        // }
+        // function subtrair(){
+        //     var output = document.querySelector('#output');
+        //     var n1 = prompt('Digite um número: ');
+        //     n1 = parseFloat(n1);
+        //     var n2 = prompt('Digite outro número:');
+        //     n2= parseFloat(n2);
+        //     var subtrai = n1 - n2;
+        //     output.innerHTML = subtrai;
+
+        // }
+        // function multiplicar(){
+        //     var output = document.querySelector('#output');
+        //     var n1 = prompt('Digite um número: ');
+        //     n1 = parseFloat(n1);
+        //     var n2 = prompt('Digite outro número:');
+        //     n2= parseFloat(n2);
+        //     var multiplica = n1 * n2;
+        //     output.innerHTML = multiplica;
+
+        // }
+        // function dividir(){
+        //     var output = document.querySelector('#output');
+        //     var n1 = prompt('Digite um número: ');
+        //     n1 = parseFloat(n1);
+        //     var n2 = prompt('Digite outro número:');
+        //     n2= parseFloat(n2);
+        //     var divide = n1 / n2;
+        //     output.innerHTML = divide;
+
+        // }
+    </script>
+</body>
+</html>
