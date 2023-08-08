@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar dois Números</title>
+    <style>
+        h1{
+            color: rgba(68, 68, 211, 0.87);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div{
+            padding-top: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Somar dois números</h1>
+    <input type="text" data-js="number1">
+    <input type="text" data-js="number2">
+    <button type="button">Somar</button>
+    <div data-js="result"></div>
+    <script>
+        document.querySelector('button')
+        .addEventListener('click', handleClik, false);
+
+        function handleClik(){
+            var number1 = document.querySelector('[data-js ="number1"]').value;
+            var number2 = document.querySelector('[data-js ="number2"]').value;
+
+            document.querySelector('[data-js = "result"]').innerHTML = sum(number1,number2);
+
+        }
+        function sum(number1, number2){
+            var decimal = 10;
+            return parseInt(number1, decimal) + parseInt(number2, decimal);
+        }
+    </script>
+</body>
+</html>
