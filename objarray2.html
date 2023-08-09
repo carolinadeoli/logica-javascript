@@ -1,6 +1,37 @@
-<!-- Chegou a hora de praticar. Para este exercício, crie um novo documento chamado 06.03_exercicio.html a partir do base. Sua missão será criar um array com três objetos. Cada objeto deverá ter duas propriedades (nome e email). 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+</head>
+<body>
+    <h1>Lógica de Programação com JavaScript</h1>
+    <div id="output"></div>
+    <script>
+        var user1 = new Object();
+        user1.nome = "Maria";
+        user1.email = 'maria@server.com'
 
-Depois, basta mostrar na tela (melhor se for utilizando a div com id="output") e nome e o email de cada um dos objetos da array criada acima.
+        var user2 = new Object();
+        user2.nome = 'João';
+        user2.email = "joao@server.com";
 
-E ai? bora praticar? No próximo vídeo eu mostro como foi que eu resolvi. -->
+        var user3 = new Object();
+        user3.nome = 'Ana';
+        user3.email = 'ana@server.com';
 
+        var users = new Array(user1, user2, user3);
+
+        var msg ='';
+        var x = 0;
+
+        while(users[x]){
+            msg+= users[x].nome + ' - ' + users[x].email +'<br>'
+            x++;
+        }
+        document.querySelector('#output').innerHTML = msg;
+
+    </script>
+</body>
+</html>
