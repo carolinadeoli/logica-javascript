@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Desafio IMC</h1>
+    <script>
+        (function(){
+            function calcularIMC(peso,altura, callback){
+                var imc = peso / (altura * altura);
+                if(callback && typeof callback ==='function'){
+                    return  callback(imc);
+                } else{
+                    return imc;
+                }
+            }
+
+            function classificaIMC(imc){
+
+
+                if(imc <= 16.9){
+                    return 'muito abaixo do normal;'
+                } else if(imc <= 18.4){
+                    return 'abaixo do peso';
+                } else if (imc <= 24.9){
+                    return 'peso normal'
+                } else if (imc <= 29.9){
+                    return 'acima do peso'
+                } else if (imc <= 34.9){
+                    return 'obesidade I'
+                } else if(imc <= 40){
+                    return ' obesidade II'
+                } else{
+                    return 'obesidade III'
+                }
+            }
+
+            var peso = 65;
+            var altura = 1.75;
+            var imc = calcularIMC(peso, altura, classificaIMC);
+            // var classificacao = classificaIMC(imc);
+
+            console.log('classificacao IMC: ',imc);
+            
+        })()
+    </script>
+</body>
+</html>
