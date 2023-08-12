@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Hack</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Desafio Hack</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In magni nulla voluptatibus eligendi. Numquam natus dolorum quos neque quasi doloribus minima ipsa, ipsam vitae dicta nesciunt, quaerat hic eveniet beatae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At provident reiciendis itaque, accusantium facere hic, pariatur adipisci dignissimos aliquid praesentium nisi tenetur quis, ipsum repudiandae voluptatem aliquam voluptate vero odit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error iure, ex dolores natus ducimus, at fugit et cum possimus iusto sunt vero suscipit, sapiente saepe placeat perferendis illo exercitationem? Eum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint maiores illo minima nemo, quibusdam labore rerum explicabo blanditiis consectetur, nisi similique eius soluta illum, perferendis ex laudantium officiis architecto ab?</p>
+    </div>
+    
+    <script>
+        (function(){
+            'use strict';
+            var paragrafos = document.querySelectorAll('p');
+            var x =0;
+            while(paragrafos [x]){
+                paragrafos[x].textContent = x +' Essa página foi hackeada';
+                x++;
+            }
+        })()
+    </script>
+</body>
+</html>
