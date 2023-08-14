@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Curso JavaScript</h1>
+        <form action="#">
+            <label for="txtUser">Usuario:</label><input type="text" id="txtUser" name="user"><br>
+            <label for="txtPass">Senha:</label>
+            <input type="password" id="txtPass" name="pass">
+            <br>
+            <button type="button" id="btn"> Logar</button>
+        </form>
+    </div>
+
+    <script>
+        (function(){
+            'use strict';
+            var $txtUser = document.getElementById('txtUser');
+            var $txtPass = document.getElementById('txtPass');
+            var $btn = document.getElementById('btn');
+
+            $btn.addEventListener('click', function(){
+                // alert('clicou no btn');
+                //if(!$txtUser.value || !$txtPass.value) pode fazer assim tbm
+                if($txtUser.value ==='' || $txtPass.value ===''){
+                    alert('Preencha todos os campos');
+                }
+            })
+        
+        })()
+    </script>
+</body>
+</html>

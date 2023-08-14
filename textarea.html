@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Curso JavaScript</h1>
+        <textarea name="texto" id="msg" cols="30" rows="10"></textarea>
+    </div>
+
+    <script>
+        (function(){
+            'use strict';
+            var $txtMsg = document.getElementById('msg');
+
+            $txtMsg.addEventListener('keypress', keypress);
+            $txtMsg.addEventListener('keyup', keyup);
+            $txtMsg.addEventListener('keydown', keydown);
+
+            function keypress(e){
+                console.log('keypress', this.value);
+            }
+            function keyup(e){
+                console.log('keyup', this.value);
+
+            }
+             function keydown(e){
+                console.log('keydown', this.value);
+             }
+        })()
+
+    </script>
+</body>
+</html>
