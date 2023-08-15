@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        var nome = 'Maria Silva Santos';
+
+        var nomeFormatado = formatarNome(nome);
+
+        function formatarNome(nome){
+            
+            var posicaoUltimoEspaco = nome.lastIndexOf(' ');
+
+            if(posicaoUltimoEspaco <= 0){
+                return nome;
+            }
+            
+            var ultimoNome= nome.slice(posicaoUltimoEspaco);
+            console.log('ultimoNome', ultimoNome);
+
+            var primeiroNome= nome.slice(0,posicaoUltimoEspaco);
+            console.log('primeroNome', primeiroNome);
+
+            return ultimoNome + ',' + primeiroNome
+        }
+
+        console.log(nomeFormatado);
+
+    </script>
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    <h1>Curso JavaScript</h1>
+
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+       
+       (function(){
+        window.addEventListener('load', init);
+
+        function init(){
+           var $paragrafos =document.querySelectorAll('p');
+
+           var x=0;
+
+           while($paragrafos[x]){
+                $paragrafos[x].innerHTML =formatarTexto($paragrafos[x].innerHTML);
+                x++;
+           }
+
+           function formatarTexto(texto){
+            var numeroMaximoCaracteres =200; 
+            if(texto.length <=numeroMaximoCaracteres) 
+                    return texto;
+             var subTexto = texto.slice(0,numeroMaximoCaracteres);
+             return subTexto + '...'
+           }
+        }
+       })()
+
+    </script>
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    <h1>Curso JavaScript</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore neque nam eos nostrum debitis quas ipsum eius veritatis dolores aperiam iste dolorum nihil illum vero illo ipsa, perferendis molestiae.</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid sapiente possimus sed, ipsa deserunt fugiat eaque eum nostrum eligendi laborum ab consectetur fugit expedita cum, deleniti voluptates doloremque eveniet itaque.</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia provident eligendi, exercitationem corporis maxime recusandae doloribus repudiandae, assumenda facilis magnam dolorum quibusdam itaque quas sint distinctio repellat pariatur laudantium error.</p>
+
+    
+</body>
+</html>
