@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    <h1>Curso de JavaScript</h1>
+    <form action="#">
+        <textarea name="contrato" id="" cols="50" rows="10" readonly>
+            Contrato de Serviços Prestados
+        </textarea>
+        <br>
+        <label>
+            <input type="checkbox" id="chk" checked> Li e aceito os termos desse contrato
+        </label>
+    
+        <input type="submit" value="Continuar" id="btn">
+        <br>
+    </form>
+
+    <script>
+        (function(){
+            'use strict;'
+            var $btn = document.getElementById('btn');
+            var $chk = document.getElementById('chk');
+            
+            $btn.disabled =toggleBtn();
+            
+            $chk.addEventListener('change', function(){
+                // if(this.checked === true){
+                //     $btn.disabled = false;
+                // } else{
+                //     $btn.disabled = true;
+                // }
+                $btn.disabled =toggleBtn();
+            });
+
+            function toggleBtn(){
+                return !$chk.checked;
+            }
+
+        })()
+    </script>
+</body>
+</html>
