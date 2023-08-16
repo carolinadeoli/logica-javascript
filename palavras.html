@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Curso de JavaScript</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A enim veritatis iusto neque natus obcaecati adipisci quisquam recusandae provident architecto illo esse error, id totam laboriosam corrupti tempore laborum consequatur.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, placeat error? Quam fugiat quibusdam ut! Pariatur aliquam labore, sunt enim a commodi rem corrupti repellat rerum porro deleniti recusandae aut!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quia voluptas voluptates, quasi molestias mollitia enim voluptatum nesciunt eius fuga. Cum similique ipsum pariatur labore alias asperiores, fugiat ab enim.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint possimus voluptatum autem incidunt reiciendis, laboriosam odit repudiandae id, nobis modi in cupiditate assumenda doloribus eius. Provident quasi molestias reprehenderit minima.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia repudiandae corporis deserunt. Molestias, ullam porro minima fuga in est ea repudiandae adipisci recusandae. Alias nesciunt maiores quaerat in, iste praesentium.</p>
+         
+    </div>
+
+    <script>
+        var paragrafos = document.querySelectorAll('p')
+
+        for (var i =0; i < paragrafos.length; i ++){
+            paragrafos[i].innerHTML =
+            formataParagrafo(paragrafos[i].innerHTML);
+
+        }
+
+        function formataParagrafo(texto){
+            var arr = texto.split(' ')
+            
+            if(arr.length > 10){
+                return arr.slice(0,10).join(' ') + '...';
+            }
+            
+            return texto
+        }
+
+
+
+    </script>
+  
+</body>
+</html>

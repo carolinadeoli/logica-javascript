@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function(){
+            var data = new Date();
+            data.setDate(16);
+            data.setMonth(7);
+
+           
+
+            function formatDate(data){
+                var dia = data.getDate() < 10 ?'0' + data.getDate(): data.getDate();
+
+                var mes = data.getMonth() +1;
+                mes = mes <10 ?'0' + mes : mes;
+                return dia + '/' + mes +'/' + data.getFullYear();
+            }
+            console.log(formatDate(data))
+        })()
+    </script>
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+    <h1>Curso de JavaScript</h1>
+</body>
+</html>
