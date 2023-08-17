@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript Completo</h1>
+    <input type="text" id="cronometro">
+    <button id="iniciar">Iniciar</button>
+    <button id="pausar">Pausar</button>
+    <button id="parar">Parar</button>
+</body>
+<script>
+    (function(){
+        var $cronometro = document.querySelector('#cronometro');
+        var $iniciar = document.querySelector('#iniciar');
+        var $pausar = document.querySelector('#pausar');
+        var $parar = document.querySelector('#parar');
+
+        $iniciar.addEventListener('click', iniciar);
+        $pausar.addEventListener('click',pausar);
+        $parar.addEventListener('click', parar);
+
+        var msClickIniciar = 0;
+        function iniciar(){
+            msClickIniciar = Date.now();
+            iniciarCronometro();
+        }
+        
+        function iniciarCronometro(){
+            setInterval(function(){
+                var msAgora = Date.now();
+                var diferenca = msAgora - msClickIniciar
+                cronometro.value = formataMS(diferenca)
+            },100)
+        }
+
+        function formataMS(ms){
+            if(ms <1000){
+                return ms;
+            } else if (ms <6000){
+                var s = ms/1000;
+                s =parseInt(s);
+
+                var c = ms -(s*1000);
+                return s + ':' + c;
+            } else{
+                var m = ms /(60000);
+                m = parseInt(m);
+                var s = ms /1000 -(m *60);
+                s = parseInt(s);
+                var c = ms- (s *1000) - (m*60*1000);
+                return m + ":" + s +":" + c;
+            }
+        }
+        function pausar(){
+
+        }
+
+        function parar(){
+
+        }
+    })();
+</script>
+</html>
