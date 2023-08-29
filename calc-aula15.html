@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Para Aula 15 ElasNaTech</title>
+</head>
+<body>
+    <form action="#" id='frm'>
+        <div id="container">
+            <div id="topo">
+                <h1>Aula 15 DevWeb</h1>
+
+            </div>
+            <div id="menu"></div>
+
+            <div id="left">
+                <div class="bloco">
+                    <span>Nome:</span>
+                    <input type="text" name="txtnome" placeholder="Insira seu nome">
+                    <input type="button" value="Enviar" id="enviar" onClick="ola('olá')">
+                </div>
+                <div class="bloco1">
+                    <span>Insira os números:</span><br>
+
+                    <input type="text" size="2" name="n1" placeholder="n1"><br>
+                    <input type="text" size="2" name="n2" placeholder="n2"><br><br>
+
+                    <input type="button" value="+" onClick="soma()">
+                    <input type="button" value="-" onClick="subtracao()">
+                    <input type="button" value="*" onClick="multiplicacao()">
+                    <input type="button" value="/" onClick="divisao()">
+
+
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <script>
+        alert('olá mundo!');
+
+        function ola(x){
+            var f = document.getElementById('frm');
+            var txt = frm.txtnome;
+             txt.value= 'olá ' + txt.value;
+        }
+        
+    </script>
+</body>
+</html>
