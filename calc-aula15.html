@@ -24,14 +24,12 @@
                 <div class="bloco1">
                     <span>Insira os números:</span><br>
 
-                    <input type="text" size="2" name="n1" placeholder="n1"><br>
-                    <input type="text" size="2" name="n2" placeholder="n2"><br><br>
-
-                    <input type="button" value="+" onClick="soma()">
-                    <input type="button" value="-" onClick="subtracao()">
-                    <input type="button" value="*" onClick="multiplicacao()">
-                    <input type="button" value="/" onClick="divisao()">
-
+                    <input type="text" size="2" name="n1" placeholder="n1" id="n1"><br>
+                    <input type="text" size="2" name="n2" placeholder="n2" id="n2"><br><br>
+                    <input type="button" value="+" onclick="soma()">
+                    <input type="button" value="-" onclick="subtracao()">
+                    <input type="button" value="*" onclick="multiplicacao()">
+                    <input type="button" value="/" onclick="divisao()">
 
                 </div>
 
@@ -39,13 +37,55 @@
         </div>
     </form>
     <script>
+        
         alert('olá mundo!');
 
+        
         function ola(x){
             var f = document.getElementById('frm');
             var txt = frm.txtnome;
              txt.value= 'olá ' + txt.value;
         }
+        
+        function soma(){
+            
+            var n1= document.getElementById('n1').value;
+            var n2= document.getElementById('n2').value;
+            n1 = parseFloat(n1);
+            n2 = parseFloat(n2);
+            var soma = n1+n2;
+            alert(soma);
+        }
+        
+        function subtracao(){
+           
+            var n1= document.getElementById('n1').value;
+            var n2= document.getElementById('n2').value;
+            n1 = parseFloat(n1);
+            n2 = parseFloat(n2);
+            var subtracao= n1-n2;
+            alert(subtracao);
+        }
+
+        function multiplicacao(){
+            var f = document.getElementById('frm');
+            var n1= document.getElementById('n1').value;
+            var n2= document.getElementById('n2').value;
+            n1 = parseFloat(n1);
+            n2 = parseFloat(n2);
+            var multiplicacao= n1*n2;
+            alert(multiplicacao);
+        }
+        function divisao(){
+            var n1= document.getElementById('n1').value;
+            var n2= document.getElementById('n2').value;
+            n1 = parseFloat(n1);
+            n2 = parseFloat(n2);
+            var divisao= n1/n2;
+            alert(divisao);
+        }
+
+        
         
     </script>
 </body>
