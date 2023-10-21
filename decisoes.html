@@ -17,7 +17,7 @@
          if(jogador1===jogador2){
             alert('Empate!')
          } else{
-            var sorteio = parseInt(Math.random()*2);
+            var sorteio = parseInt(Math.random()*2); //se o número sorteado for 0 ganha quem escolheu o menor número
             if(sorteio ===0){
 
                 if (jogador1 < jogador2){
@@ -25,7 +25,7 @@
                 } else{
                     alert('Ganhou o Jogador 2!');
                 }
-            } else{
+            } else{ //se o número sorteado for 1 ganha quem escolheu o maior número
                 if (jogador1 > jogador2){
                     alert(' Ganhou o Jogador 2!')
                 } else{
