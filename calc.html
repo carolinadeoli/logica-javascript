@@ -18,6 +18,7 @@
         var n1 = prompt('Digite um número: ');
         n1 = parseFloat(n1);
 
+        //pega o valor de n1 e coloca no output
         function escreve(){
             var output = document.querySelector('#output');
             output.innerHTML = n1;
@@ -27,7 +28,7 @@
             var n2 = prompt('Digite outro número:');
             n2= parseFloat(n2);
             n1 = n1 + n2;
-            escreve();
+            escreve(); //aparece o valor da soma(n1 da linha 30 é o mesmo da função escreve, e aqui na soma é ele mesmo mais o n2);
         }
         function subtrair(){
             var n2 = prompt('Digite outro número:');
@@ -39,6 +40,7 @@
             var n2 = prompt('Digite outro número:');
             n2= parseFloat(n2);
             n1 = n1 * n2;
+            //n1 *= n;
             escreve();
         }
         function dividir(){
