@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+</head>
+<body>
+    <h1>Lógica de Programação com JavaScript</h1>
+    <button onclick="iniciarCalculo('+')"> + </button>
+    <button onclick="iniciarCalculo('-')"> - </button>
+    <button onclick="iniciarCalculo('*')"> *</button>
+    <button onclick="iniciarCalculo('/')">/</button>
+    <div id="output"></div>
+
+    <script>
+         //voltar, vídeo 541       
+        var n2 = prompt('Digite um número: ');
+        n2 = parseFloat(n2);
+        escreve(n2);
+        function iniciarCalculo(simbolo){
+            var n1 = document.querySelector('#output').textContent;            
+            var n2 = prompt('Digite um número: ');
+            n2 = parseFloat(n2);
+
+            var msg = calcular(simbolo,n1,n2);
+            escreve(msg);
+        }
+
+        function escreve(mensagem){
+            var output = document.querySelector('#output');
+            output.innerHTML = n1;
+            output.innerHTML= mensagem;
+        }
+
+        function calcular(simbolo,n1,n2){           
+            if (simbolo !== '+' && simbolo !=='-' && simbolo!=='*'&& simbolo !=='/'){
+                alert('digite simbolo valido')
+                return 0;
+            }
+            if(isNaN(n1)|| isNaN(n2)){
+                alert('somente números')
+                return 0;
+            }
+            var numeroCalculado = null;
+            switch(simbolo){
+                case '+':
+                    numeroCalculado = n1 + n2;
+                    break;
+                case '-':
+                    numeroCalculado = n1 - n2;
+                    break;
+                case '*':
+                    numeroCalculado = n1 * n2;
+                    break; 
+                case '/':
+                numeroCalculado = n1 / n2;
+                                         
+            }
+            return numeroCalculado;
+        
+        }
+    </script>

@@ -8,7 +8,7 @@
 <body>
     <h1>Lógica de Programação</h1>
     <button onclick="mostrarAreaAlert(largura, altura)">Mostrar área num alert</button>
-    <button onclick="mostrarAreaOutput(largura,altura)"> Mostrar área num output</button>
+    <button onclick="mostrarAreaOutput(largura,altura)"> Mostrar área no output</button>
     <div id="output"></div>
     <script>
 
@@ -18,13 +18,13 @@
             
             var altura = prompt('Digite a altura:');
             altura = parseFloat(altura);
-            try{
-                var area = calcularArea(largura, altura);
+            try{ //10º passo fazer os try/catches
+                var area = calcularArea(largura, altura);//3º passo escrever essa linha
             } catch(e){
-                area = e;
+                area = e; //aqui a área recebe o que está escrito no erro
             }
             
-            alert('A área total é: '+ area);
+            alert('A área total é: '+ area);//5ºpasso
         }
 
         function mostrarAreaOutput(){
@@ -34,24 +34,26 @@
             var altura = prompt('Digite a altura:');
             altura = parseFloat(altura);
             try{
-                var area = calcularArea(largura, altura);
+                var area = calcularArea(largura, altura);// 4º passo
             } catch(e){
                 area = e;
             }
             
-            document.querySelector('#output').innerHTML = 'A área total é: '+ area;
+            document.querySelector('#output').innerHTML = 'A área total é: '+ area;//6ºpasso
         }
-        mostrarAreaAlert();
+        mostrarAreaAlert();// 7º passo executa quando a pg é aberta
         
         function calcularArea(largura,altura){
-            if(largura=== undefined || altura === undefined){
+            if(largura=== undefined || altura === undefined){//8º passo
                 throw new Error('calcularArea precisa receber dois números');
             }
-            if(isNaN(largura) || isNaN(altura)){
+            if(isNaN(largura) || isNaN(altura)){ //9° passo
                 throw new Error ('Apenas números')
             }
-            return largura * altura;
+            return largura * altura;//2º passo
         }
+        //primeiro passo: escrever o nome das funções;
+        
     </script>
     
 </body>
