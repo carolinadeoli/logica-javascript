@@ -18,7 +18,7 @@
     </div>
 
     <script>
-        (function(){
+        (function(){//auto invocável
             'use strict';
             var $form = document.getElementByquerySelector('form');
             var $txtUser = document.getElementById('txtUser');
@@ -26,7 +26,7 @@
             var $btn = document.getElementById('btn');
 
             $form.addEventListener('submit', function(e){
-               
+               //objeto evento é o 'e' previne comportamento padrão que é enviar o form
                 if(!$txtUser.value || !$txtPass.value){
                     alert('Preencha todos os campos');
                     e.preventDefault();

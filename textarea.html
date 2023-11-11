@@ -33,7 +33,7 @@
            
             // $resta.textContent = maxima;
             
-            $txtMsg.addEventListener('input', checkLength)
+            $txtMsg.addEventListener('input', checkLength)//após declarar as vars(2ºpasso)- input, função do teclado
 
             function checkLength(e){
                 var numeroLetrasDigitadas = this.value.length;
@@ -44,6 +44,8 @@
             function showCaractersLeft(n){
                 $resta.textContent = n;
             }
+
+            //this é o objeto dono do evento, atrelado ao evento
         })()
 
     </script>
