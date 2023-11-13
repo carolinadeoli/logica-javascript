@@ -36,14 +36,14 @@
             $txtMsg.addEventListener('input', checkLength)//após declarar as vars(2ºpasso)- input, função do teclado
 
             function checkLength(e){
-                var numeroLetrasDigitadas = this.value.length;
+                var numeroLetrasDigitadas = this.value.length; //this é o text area
                 var caracteresRestantes = maxima - numeroLetrasDigitadas;
                 showCaractersLeft(caracteresRestantes);
             } 
             
             function showCaractersLeft(n){
                 $resta.textContent = n;
-            }
+            }//valor n, recebe número
 
             //this é o objeto dono do evento, atrelado ao evento
         })()
