@@ -28,9 +28,9 @@
             $btn.addEventListener('click', function(){
                 var task =  '<li>'+ $txtTask.value +'</li>';
                 
-                $ul.innerHTML += task;
+                $ul.innerHTML += task; // o mais é pra acrescentar no final
 
-                $txtTask.value = ' ';
+                $txtTask.value = ' '; //apaga valor do input
                 $txtTask.focus();
                 
             })

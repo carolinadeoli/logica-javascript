@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica JS</title>
+</head>
+<body>
+    <h1>Lógica JS</h1>
+    <form action="#">
+        <textarea name="contrato" id="contrato" cols="30" rows="10" readonly>Contrato de serviço</textarea>
+        <label for="">
+            <input type="checkbox" name="" id="chk">Li e aceito os termos de contrato
+        </label>
+        <input type="submit" value="Continuar" id="btn">
+    </form>
+    <script>
+        var $btn = document.getElementById('btn');
+        var $chk = document.getElementById('chk');
+        
+        $btn.disabled = true;
+
+        $chk.addEventListener('change', function(){
+            if(this.checked === true){
+                $btn.disabled = false;
+            } else{
+               $btn.disabled = true; 
+            }
+        })
+
+ //$btn.disabled = !this.checked;
+    </script>
+</body>
+</html>
