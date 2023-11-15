@@ -11,7 +11,7 @@
 
     <script>
         (function(){
-            var $relogio = document.querySelector('relogio');
+            var $relogio = document.querySelector('.relogio');
 
             function getHour(){
                 var data = new Date();
@@ -23,7 +23,7 @@
                 
             }
             function formata(t){
-                 return t < 10 ? "0" + t : t;
+                 return t < 10 ? "0" + t : t; 
             }
 
             function mostraRelogio(atual){
@@ -38,6 +38,6 @@
             },1000)
         })();
     </script>
-    <!-- deu erro, procurar pq -->
+   
 </body>
 </html>
